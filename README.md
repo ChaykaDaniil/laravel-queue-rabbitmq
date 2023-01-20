@@ -10,16 +10,16 @@ RabbitMQ Queue driver for Laravel
 
 Only the latest version will get new features. Bug fixes will be provided using the following scheme:
 
-| Package Version | Laravel Version | Bug Fixes Until  |                                                                                             |
-|-----------------|-----------------|------------------|---------------------------------------------------------------------------------------------|
-| 13              | 9               | August 8th, 2023 | [Documentation](https://github.com/vyuldashev/laravel-queue-rabbitmq/blob/master/README.md) |
+| Package Version | Laravel Version | Bug Fixes Until    |                                                                                             |
+|-----------------|-----------------|--------------------|---------------------------------------------------------------------------------------------|
+| 13              | 9               | January 20th, 2023 | [Documentation](https://github.com/vyuldashev/laravel-queue-rabbitmq/blob/master/README.md) |
 
 ## Installation
 
 You can install this package via composer using this command:
 
 ```
-composer require vladimir-yuldashev/laravel-queue-rabbitmq
+composer require ChaykaDaniil/laravel-queue-rabbitmq
 ```
 
 The package will automatically register itself.
@@ -55,7 +55,7 @@ Add connection to `config/queue.php`:
                'passphrase' => env('RABBITMQ_SSL_PASSPHRASE', null),
            ],
            'queue' => [
-               'job' => VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class,
+               'job' => ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class,
            ],
        ],
    
@@ -203,7 +203,7 @@ An example of your own job class:
 
 namespace App\Queue\Jobs;
 
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob as BaseJob;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob as BaseJob;
 
 class RabbitMQJob extends BaseJob
 {
@@ -235,7 +235,7 @@ Or maybe you want to add extra properties to the payload:
 
 namespace App\Queue\Jobs;
 
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob as BaseJob;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob as BaseJob;
 
 class RabbitMQJob extends BaseJob
 {
@@ -270,7 +270,7 @@ Horizon and then set `RABBITMQ_WORKER` to `horizon`.
 For Lumen usage the service provider should be registered manually as follow in `bootstrap/app.php`:
 
 ```php
-$app->register(VladimirYuldashev\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class);
+$app->register(ChaykaDaniil\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class);
 ```
 
 ## Consuming Messages

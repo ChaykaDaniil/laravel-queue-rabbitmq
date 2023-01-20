@@ -1,10 +1,10 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ\Console;
+namespace ChaykaDaniil\LaravelQueueRabbitMQ\Console;
 
 use Exception;
 use Illuminate\Console\Command;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
 
 class QueueDeleteCommand extends Command
 {

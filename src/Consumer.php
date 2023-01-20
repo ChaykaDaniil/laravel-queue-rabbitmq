@@ -1,7 +1,8 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ;
+namespace ChaykaDaniil\LaravelQueueRabbitMQ;
 
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 use Exception;
 use Illuminate\Container\Container;
 use Illuminate\Queue\Worker;
@@ -10,7 +11,6 @@ use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Exception\AMQPRuntimeException;
 use PhpAmqpLib\Message\AMQPMessage;
 use Throwable;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 
 class Consumer extends Worker
 {
@@ -63,9 +63,9 @@ class Consumer extends Worker
     /**
      * Listen to the given queue in a loop.
      *
-     * @param  string  $connectionName
-     * @param  string  $queue
-     * @param  WorkerOptions  $options
+     * @param string $connectionName
+     * @param string $queue
+     * @param WorkerOptions $options
      * @return int
      *
      * @throws Throwable
@@ -135,7 +135,7 @@ class Consumer extends Worker
             // Before reserving any jobs, we will make sure this queue is not paused and
             // if it is we will just pause this worker for a given amount of time and
             // make sure we do not need to kill this worker process off completely.
-            if (! $this->daemonShouldRun($options, $connectionName, $queue)) {
+            if (!$this->daemonShouldRun($options, $connectionName, $queue)) {
                 $this->pauseWorker($options, $lastRestart);
 
                 continue;
@@ -143,7 +143,7 @@ class Consumer extends Worker
 
             // If the daemon should run (not in maintenance mode, etc.), then we can wait for a job.
             try {
-                $this->channel->wait(null, true, (int) $options->timeout);
+                $this->channel->wait(null, true, (int)$options->timeout);
             } catch (AMQPRuntimeException $exception) {
                 $this->exceptions->report($exception);
 
@@ -170,7 +170,7 @@ class Consumer extends Worker
                 $this->currentJob
             );
 
-            if (! is_null($status)) {
+            if (!is_null($status)) {
                 return $this->stop($status);
             }
 
@@ -181,23 +181,23 @@ class Consumer extends Worker
     /**
      * Determine if the daemon should process on this iteration.
      *
-     * @param  WorkerOptions  $options
-     * @param  string  $connectionName
-     * @param  string  $queue
+     * @param WorkerOptions $options
+     * @param string $connectionName
+     * @param string $queue
      * @return bool
      */
     protected function daemonShouldRun(WorkerOptions $options, $connectionName, $queue): bool
     {
-        return ! ((($this->isDownForMaintenance)() && ! $options->force) || $this->paused);
+        return !((($this->isDownForMaintenance)() && !$options->force) || $this->paused);
     }
 
     /**
      * Stop listening and bail out of the script.
      *
-     * @param  int  $status
+     * @param int $status
      * @return int
      */
-    public function stop($status = 0): int
+    public function stop(int $status = 0): int
     {
         // Tell the server you are going to stop consuming.
         // It will finish up the last message and not send you any more.

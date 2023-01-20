@@ -1,12 +1,12 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ;
+namespace ChaykaDaniil\LaravelQueueRabbitMQ;
 
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\ServiceProvider;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Console\ConsumeCommand;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Console\ConsumeCommand;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
 
 class LaravelQueueRabbitMQServiceProvider extends ServiceProvider
 {

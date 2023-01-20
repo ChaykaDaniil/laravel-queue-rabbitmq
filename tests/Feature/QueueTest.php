@@ -1,6 +1,6 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ\Tests\Feature;
+namespace ChaykaDaniil\LaravelQueueRabbitMQ\Tests\Feature;
 
 use PhpAmqpLib\Connection\AMQPLazyConnection;
 
