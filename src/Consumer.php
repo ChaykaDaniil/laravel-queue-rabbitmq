@@ -1,8 +1,8 @@
 <?php
 
-namespace chaykadaniil\LaravelQueueRabbitMQ;
+namespace ChaykaDaniil\LaravelQueueRabbitMQ;
 
-use chaykadaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 use Exception;
 use Illuminate\Container\Container;
 use Illuminate\Queue\Worker;
@@ -197,12 +197,12 @@ class Consumer extends Worker
      * @param int $status
      * @return int
      */
-    public function stop(int $status = 0): int
+    public function stop($status = 0, $options = null): int
     {
         // Tell the server you are going to stop consuming.
         // It will finish up the last message and not send you any more.
         $this->channel->basic_cancel($this->consumerTag, false, true);
 
-        return parent::stop($status);
+        return parent::stop($status, $options);
     }
 }

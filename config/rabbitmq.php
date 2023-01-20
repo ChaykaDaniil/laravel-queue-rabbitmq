@@ -30,7 +30,7 @@ return [
             'passphrase' => env('RABBITMQ_SSL_PASSPHRASE', null),
         ],
         'queue' => [
-            'job' => chaykadaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class,
+            'job' => ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class,
         ],
     ],
 

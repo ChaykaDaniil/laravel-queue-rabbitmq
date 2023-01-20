@@ -2,7 +2,7 @@
 
 /** @noinspection PhpRedundantCatchClauseInspection */
 
-namespace chaykadaniil\LaravelQueueRabbitMQ\Queue;
+namespace ChaykaDaniil\LaravelQueueRabbitMQ\Queue;
 
 use ErrorException;
 use Exception;
@@ -21,7 +21,7 @@ use PhpAmqpLib\Exchange\AMQPExchangeType;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
 use Throwable;
-use chaykadaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob;
+use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob;
 
 class RabbitMQQueue extends Queue implements QueueContract
 {
