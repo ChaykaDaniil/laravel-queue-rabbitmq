@@ -23,12 +23,12 @@
   },
   "autoload": {
     "psr-4": {
-      "chaykadaniil\\LaravelQueueRabbitMQ\\": "src/"
+      "ChaykaDaniil\\LaravelQueueRabbitMQ\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "chaykadaniil\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
+      "ChaykaDaniil\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -37,7 +37,7 @@
     },
     "laravel": {
       "providers": [
-        "chaykadaniil\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
+        "ChaykaDaniil\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
       ]
     }
   },
