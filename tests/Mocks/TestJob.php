@@ -1,6 +1,6 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ\Tests\Mocks;
+namespace chaykadaniil\LaravelQueueRabbitMQ\Tests\Mocks;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

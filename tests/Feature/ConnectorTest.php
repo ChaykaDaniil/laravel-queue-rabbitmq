@@ -1,13 +1,13 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ\Tests\Feature;
+namespace chaykadaniil\LaravelQueueRabbitMQ\Tests\Feature;
 
 use Illuminate\Queue\QueueManager;
 use PhpAmqpLib\Connection\AMQPLazyConnection;
 use PhpAmqpLib\Connection\AMQPSSLConnection;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 
-class ConnectorTest extends \ChaykaDaniil\LaravelQueueRabbitMQ\Tests\TestCase
+class ConnectorTest extends \chaykadaniil\LaravelQueueRabbitMQ\Tests\TestCase
 {
     public function testLazyConnection(): void
     {

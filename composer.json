@@ -1,5 +1,5 @@
 {
-  "name": "chayka-daniil/laravel-queue-rabbitmq",
+  "name": "chaykadaniil/laravel-queue-rabbitmq",
   "description": "RabbitMQ driver for Laravel Queue. Supports Laravel Horizon.",
   "license": "MIT",
   "authors": [
@@ -23,12 +23,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ChaykaDaniil\\LaravelQueueRabbitMQ\\": "src/"
+      "chaykadaniil\\LaravelQueueRabbitMQ\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ChaykaDaniil\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
+      "chaykadaniil\\LaravelQueueRabbitMQ\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -37,7 +37,7 @@
     },
     "laravel": {
       "providers": [
-        "ChaykaDaniil\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
+        "chaykadaniil\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
       ]
     }
   },

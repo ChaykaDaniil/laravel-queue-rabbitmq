@@ -1,6 +1,6 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Connectors;
+namespace chaykadaniil\LaravelQueueRabbitMQ\Queue\Connectors;
 
 use Exception;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -12,9 +12,9 @@ use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use PhpAmqpLib\Connection\AbstractConnection;
 use PhpAmqpLib\Connection\AMQPLazyConnection;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Horizon\Listeners\RabbitMQFailedEvent;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Horizon\RabbitMQQueue as HorizonRabbitMQQueue;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use chaykadaniil\LaravelQueueRabbitMQ\Horizon\Listeners\RabbitMQFailedEvent;
+use chaykadaniil\LaravelQueueRabbitMQ\Horizon\RabbitMQQueue as HorizonRabbitMQQueue;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 
 class RabbitMQConnector implements ConnectorInterface
 {

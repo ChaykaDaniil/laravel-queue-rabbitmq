@@ -1,6 +1,6 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ\Horizon;
+namespace chaykadaniil\LaravelQueueRabbitMQ\Horizon;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -10,8 +10,8 @@ use Laravel\Horizon\Events\JobPushed;
 use Laravel\Horizon\Events\JobReserved;
 use Laravel\Horizon\JobPayload;
 use PhpAmqpLib\Exception\AMQPProtocolChannelException;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue as BaseRabbitMQQueue;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue as BaseRabbitMQQueue;
 
 class RabbitMQQueue extends BaseRabbitMQQueue
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ\Console;
+namespace chaykadaniil\LaravelQueueRabbitMQ\Console;
 
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
 
 class QueuePurgeCommand extends Command
 {

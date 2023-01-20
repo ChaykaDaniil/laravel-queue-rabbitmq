@@ -1,11 +1,11 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ\Tests\Functional;
+namespace chaykadaniil\LaravelQueueRabbitMQ\Tests\Functional;
 
 use Illuminate\Support\Str;
 use PhpAmqpLib\Exchange\AMQPExchangeType;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
-use ChaykaDaniil\LaravelQueueRabbitMQ\Tests\Functional\TestCase as BaseTestCase;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use chaykadaniil\LaravelQueueRabbitMQ\Tests\Functional\TestCase as BaseTestCase;
 
 class RabbitMQQueueTest extends BaseTestCase
 {

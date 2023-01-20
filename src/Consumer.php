@@ -1,8 +1,8 @@
 <?php
 
-namespace ChaykaDaniil\LaravelQueueRabbitMQ;
+namespace chaykadaniil\LaravelQueueRabbitMQ;
 
-use ChaykaDaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use chaykadaniil\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 use Exception;
 use Illuminate\Container\Container;
 use Illuminate\Queue\Worker;
